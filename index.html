@@ -33,6 +33,24 @@
 
     <!-- style css for this template -->
     <link href="assets/css/style.css" rel="stylesheet" id="style">
+
+    <style>
+        #balanceSection {
+            text-align: center;
+            background-color:rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px;
+            align-self: center;
+        }
+
+        /* Make button text not all caps */
+        #toggleBalanceBtn {
+            text-transform: none;
+            margin-top: 15px;
+        }
+    </style>
+
 </head>
 
 <body class="body-scroll" data-page="index">
@@ -68,7 +86,7 @@
                                 </div>
                                 <div class="col px-0 align-self-center">
                                     <p class="mb-1">Maxartkiller</p>
-                                    <p class="text-muted size-12">New York City, US</p>
+                                    <p class="text-muted size-12">Dar es Salaam, TZ</p>
                                 </div>
                                 <div class="col-auto">
                                     <button class="btn btn-44 btn-light">
@@ -81,7 +99,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <h1 class="display-4">1000.00</h1>
+                                        <h1 class="display-4">234,000</h1>
                                     </div>
                                     <div class="col-auto">
                                         <p class="text-muted">Wallet Balance</p>
@@ -223,11 +241,17 @@
                 <div class="col align-self-center ps-0">
                     <h4 class="text-color-theme"><span class="fw-normal">Hi</span>, Maxartkiller</h4>
                     <p class="text-muted">Good Morning</p>
+
                 </div>
+            </div>
+            <!-- Balance Section -->
+            <div id="balanceSection" >
+                <h4 id="balanceText">TZS **************</h4>
+                <button id="toggleBalanceBtn" class="btn btn-primary small" onclick="toggleBalance()">Show Balance</button>
             </div>
 
             <!-- money request received -->
-            <div class="row mb-4 hideonprogress">
+            <!-- <div class="row mb-4 hideonprogress">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
@@ -260,10 +284,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- swiper credit cards -->
-            <div class="row mb-3">
+            <!-- <div class="row mb-3">
                 <div class="col-12 px-0">
                     <div class="swiper-container cardswiper">
                         <div class="swiper-wrapper">
@@ -351,7 +375,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- connection -->
             <div class="row mb-3">
@@ -373,7 +397,7 @@
                                         <figure class="avatar avatar-50 shadow-sm mb-1 rounded-10">
                                             <img src="assets/img/user4.jpg" alt="">
                                         </figure>
-                                        <p class="text-color-theme size-12 small">Nicolas</p>
+                                        <p class="text-color-theme size-12 small">Erick</p>
                                     </div>
                                 </a>
                             </div>
@@ -384,7 +408,7 @@
                                         <figure class="avatar avatar-50 shadow-sm mb-1 rounded-10">
                                             <img src="assets/img/user2.jpg" alt="">
                                         </figure>
-                                        <p class="text-color-theme size-12 small">Shelvey</p>
+                                        <p class="text-color-theme size-12 small">Sara</p>
                                     </div>
                                 </a>
                             </div>
@@ -395,7 +419,7 @@
                                         <figure class="avatar avatar-50 shadow-sm mb-1 rounded-10">
                                             <img src="assets/img/user3.jpg" alt="">
                                         </figure>
-                                        <p class="text-color-theme size-12 small">Amenda</p>
+                                        <p class="text-color-theme size-12 small">Mia</p>
                                     </div>
                                 </a>
                             </div>
@@ -406,7 +430,7 @@
                                         <figure class="avatar avatar-50 shadow-sm mb-1 rounded-10">
                                             <img src="assets/img/user1.jpg" alt="">
                                         </figure>
-                                        <p class="text-color-theme size-12 small">RXL15</p>
+                                        <p class="text-color-theme size-12 small">James</p>
                                     </div>
                                 </a>
                             </div>
@@ -427,7 +451,7 @@
                                         <figure class="avatar avatar-50 shadow-sm mb-1 rounded-10">
                                             <img src="assets/img/user2.jpg" alt="">
                                         </figure>
-                                        <p class="text-color-theme size-12 small">Shelvey</p>
+                                        <p class="text-color-theme size-12 small">Jane</p>
                                     </div>
                                 </a>
                             </div>
@@ -438,7 +462,7 @@
                                         <figure class="avatar avatar-50 shadow-sm mb-1 rounded-10">
                                             <img src="assets/img/user3.jpg" alt="">
                                         </figure>
-                                        <p class="text-color-theme size-12 small">Amenda</p>
+                                        <p class="text-color-theme size-12 small">Amanda</p>
                                     </div>
                                 </a>
                             </div>
@@ -449,7 +473,7 @@
                                         <figure class="avatar avatar-50 shadow-sm mb-1 rounded-10">
                                             <img src="assets/img/user1.jpg" alt="">
                                         </figure>
-                                        <p class="text-color-theme size-12 small">RXL15</p>
+                                        <p class="text-color-theme size-12 small">Austin</p>
                                     </div>
                                 </a>
                             </div>
@@ -459,7 +483,7 @@
             </div>
 
             <!-- offers banner -->
-            <div class="row mb-4">
+            <!-- <div class="row mb-4">
                 <div class="col-12">
                     <div class="card theme-bg text-center">
                         <div class="card-body">
@@ -481,7 +505,7 @@
                     </div>
                 </div>
             </div>
-
+ -->
             <!-- Dark mode switch -->
             <div class="row mb-4">
                 <div class="col-12">
@@ -500,7 +524,7 @@
             <!-- Saving targets -->
             <div class="row mb-3">
                 <div class="col">
-                    <h6 class="title">Saving Targets</h6>
+                    <h6 class="title">* Assistant suggestions</h6>
                 </div>
                 <div class="col-auto">
 
@@ -520,8 +544,8 @@
                                     </div>
                                 </div>
                                 <div class="col-auto align-self-center ps-0">
-                                    <p class="small mb-1 text-muted">USA Trip</p>
-                                    <p>60<span class="small">%</span></p>
+                                    <p class="small mb-1 text-muted">Internet bundle</p>
+                                    <span style="font-weight: 600;">1GB </span> <span style="font-size:12px;">@TZS 2,100/=</span>
                                 </div>
                             </div>
                         </div>
@@ -540,14 +564,14 @@
                                     </div>
                                 </div>
                                 <div class="col-auto align-self-center ps-0">
-                                    <p class="small mb-1 text-muted">Car loan</p>
-                                    <p>85<span class="small">%</span></p>
+                                    <p class="small mb-1 text-muted">LUKU bill</p>
+                                    <span style="font-weight: 600;">14.0 </span> <span style="font-size:12px;">units @TZS 5,000/=</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 col-lg-6">
+                <div class="col-8 col-md-6 col-lg-6">
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
@@ -559,19 +583,19 @@
                                 <div class="col align-self-center ps-0">
                                     <div class="row mb-2">
                                         <div class="col">
-                                            <p class="small text-muted mb-0">Home Loan</p>
-                                            <p>3510.00 $</p>
+                                            <p class="small text-muted mb-0">Transfer to VISA</p>
+                                            <span style="font-weight: 600;">*******456 </span> <span style="font-size:12px;"> @TZS 25,000/=</span>
                                         </div>
-                                        <div class="col-auto text-end">
+                                        <!-- <div class="col-auto text-end">
                                             <p class="small text-muted mb-0">Next EMI</p>
                                             <p class="small">1 Aug 2024</p>
-                                        </div>
+                                        </div> -->
                                     </div>
 
-                                    <div class="progress alert-danger h-4">
+                                    <!-- <div class="progress alert-danger h-4">
                                         <div class="progress-bar bg-danger w-50" role="progressbar" aria-valuenow="25"
                                             aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -668,7 +692,7 @@
             </div>
 
             <!-- Blogs -->
-            <div class="row mb-3">
+            <!-- <div class="row mb-3">
                 <div class="col">
                     <h6 class="title">News and Upcomming</h6>
                 </div>
@@ -730,7 +754,7 @@
                         </div>
                     </a>
                 </div>
-            </div>
+            </div> -->
 
         </div>
         <!-- main page content ends -->
@@ -810,7 +834,7 @@
     <!-- Footer ends-->
 
     <!-- PWA app install toast message -->
-    <div class="position-fixed bottom-0 start-50 translate-middle-x  z-index-10">
+    <!-- <div class="position-fixed bottom-0 start-50 translate-middle-x  z-index-10">
         <div class="toast mb-3" role="alert" aria-live="assertive" aria-atomic="true" id="toastinstall"
             data-bs-animation="true">
             <div class="toast-header">
@@ -830,7 +854,22 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+
+    <script>
+        function toggleBalance() {
+            var balanceText = document.getElementById("balanceText");
+            var toggleBtn = document.getElementById("toggleBalanceBtn");
+    
+            if (balanceText.innerText === "TZS **************") {
+                balanceText.innerText = "TZS 234,000.00";
+                toggleBtn.innerText = "Hide Balance";
+            } else {
+                balanceText.innerText = "TZS **************";
+                toggleBtn.innerText = "Show Balance";
+            }
+        }
+    </script>
 
     <!-- Required jquery and libraries -->
     <script src="assets/js/jquery-3.3.1.min.js"></script>
