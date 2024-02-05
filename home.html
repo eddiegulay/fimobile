@@ -254,23 +254,34 @@
 
             <!-- Balance Section -->
             <div id="balanceSection" >
-                <h4 id="balanceText">TZS **************</h4>
-                <button id="toggleBalanceBtn" class="btn btn-primary small" onclick="toggleBalance()">Show Balance</button>
+                <h4 id="balanceText" class="nbs">TZS **************</h4>
+                <button id="toggleBalanceBtn" class="btn btn-primary small" onclick="">Show Balance</button>
             </div>
 
             <script>
+                
+                var toggleBtn = document.getElementById("toggleBalanceBtn");
+
+                toggleBtn.addEventListener("click", toggleBalance);
+
                 function toggleBalance(){
                     var balanceText = document.getElementById("balanceText");
-                    var toggleBtn = document.getElementById("toggleBalanceBtn");
+
                     
                     // generate random account balance
                     var balance = Math.floor(Math.random() * 1000000) + 100000;
                     // currency format balance
                     balance = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'TZS' }).format(balance);
-                    if(balanceText.innerHTML == "**************"){
+                    
+                    // check if balanceText has class nbs replace it with bs
+                    if(balanceText.classList.contains("nbs")){
+                        balanceText.classList.remove("nbs");
+                        balanceText.classList.add("bs");
                         balanceText.innerHTML = balance;
                         toggleBtn.innerHTML = "Hide Balance";
                     } else {
+                        balanceText.classList.remove("bs");
+                        balanceText.classList.add("nbs");
                         balanceText.innerHTML = "TZS **************";
                         toggleBtn.innerHTML = "Show Balance";
                     }
@@ -340,7 +351,7 @@
                                         <div class="row">
                                             <div class="col-auto">
                                                 <div class="circle-small">
-                                                    <div id="circleprogresstwo"></div>
+                                                    <div id="circleprogressthree"></div>
                                                     <div class="avatar avatar-30 alert-success text-success rounded-circle">
                                                         <i class="bi bi-cash-stack"></i>
                                                     </div>
