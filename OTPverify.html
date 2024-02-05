@@ -68,11 +68,26 @@
             </div>
             <div class="col-10 col-md-6 col-lg-5 col-xl-3 mx-auto align-self-center text-center py-4">
                 <h1 class="mb-4 text-color-theme">Verify OTP</h1>
-                <p class="text-muted mb-4">Verify OTP sent to your provided email address and phone number</p>
+                <p class="text-muted mb-4">Please enter OTP we sent you</p>
 
                 <div class="form-floating is-valid mb-3">
-                    <input type="text" class="form-control" value="123456" placeholder="Enter OTP" id="otp">
-                    <label for="otp">Enter OTP</label>
+                    <style>
+                        input {
+                            width: 50px;
+                            height: 50px;
+                            text-align: center;
+                            margin: 5px;
+                            margin-bottom: 50px;
+                            border: none;
+                            border-radius: 0.8rem;
+                        }
+                    </style>
+                    <input class="w-20 h-20 text-center border-none rounded-2xl" type="text" id="otp1" maxlength="1">
+                    <input class="w-20 h-20 text-center border-none rounded-2xl" type="text" id="otp2" maxlength="1">
+                    <input class="w-20 h-20 text-center border-none rounded-2xl" type="text" id="otp3" maxlength="1">
+                    <input class="w-20 h-20 text-center border-none rounded-2xl" type="text" id="otp4" maxlength="1">
+                    <!-- <input type="text" class="form-control" value="123456" placeholder="Enter OTP" id="otp">
+                    <label for="otp">Enter OTP</label> -->
                 </div>
                 <button type="button" class="btn btn-lg btn-default w-100 mb-4 shadow"
                     onclick="window.location.replace('thankyou2.html');">
