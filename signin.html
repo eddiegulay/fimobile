@@ -50,38 +50,33 @@
     <main class="container-fluid h-100">
         <div class="row h-100 overflow-auto">
             <div class="col-12 text-center mb-auto px-0">
-                <header class="header">
-                    <div class="row">
-                        <div class="col-auto"></div>
-                        <div class="col">
-                            <div class="logo-small">
-                                <img src="assets/img/logo.png" alt="">
-                                <h5>FiMobile</h5>
-                            </div>
-                        </div>
-                        <div class="col-auto"></div>
-                    </div>
-                </header>
+                
             </div>
             <div class="col-10 col-md-6 col-lg-5 col-xl-3 mx-auto align-self-center text-center py-4">
-                <h1 class="mb-4 text-color-theme">Sign in</h1>
+                <h1 class="mb-4 text-color-theme">Welcome back</h1>
+                <p class="mb-4">Please enter your PIN</p>
                 <form class="was-validated needs-validation" novalidate>
-                    <div class="form-group form-floating mb-3 is-valid">
-                        <input type="text" class="form-control" value="maxartkiller" id="email" placeholder="Username">
-                        <label class="form-control-label" for="email">Username</label>
+                    <div class="flex p-8">
+                        <style>
+                            input {
+                                width: 50px;
+                                height: 50px;
+                                text-align: center;
+                                margin: 5px;
+                                margin-bottom: 50px;
+                                border: none;
+                                border-radius: 0.8rem;
+                            }
+                        </style>
+                        <input class="w-20 h-20 text-center border-none rounded-2xl" type="text" id="otp1" maxlength="1">
+                        <input class="w-20 h-20 text-center border-none rounded-2xl" type="text" id="otp2" maxlength="1">
+                        <input class="w-20 h-20 text-center border-none rounded-2xl" type="text" id="otp3" maxlength="1">
+                        <input class="w-20 h-20 text-center border-none rounded-2xl" type="text" id="otp4" maxlength="1">
                     </div>
-
-                    <div class="form-group form-floating is-invalid mb-3">
-                        <input type="password" class="form-control " id="password" placeholder="Password">
-                        <label class="form-control-label" for="password">Password</label>
-                        <button type="button" class="text-danger tooltip-btn" data-bs-toggle="tooltip"
-                            data-bs-placement="left" title="Enter valid Password" id="passworderror">
-                            <i class="bi bi-info-circle"></i>
-                        </button>
-                    </div>
+                    <p> Phone number: *******069</p>
                     <p class="mb-3 text-center">
                         <a href="forgot-password.html" class="">
-                            Forgot your password?
+                            Forgot your PIN?
                         </a>
                     </p>
 
