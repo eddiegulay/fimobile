@@ -77,28 +77,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card bg-opac text-white border-0">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h1 class="display-4" id="balance" style="transition: 1s; opacity: 0;">100.00</h1>
-                                    </div>
-                                    <div class="col-auto btn btn-lg" id="show_balance">
-                                        <p class="text-muted">Show Balance</p>
-                                    </div>
-                                    <script>
-                                        // set opacity to 1 from 0
-                                        document.getElementById('show_balance').onclick = ()=>{
-                                            document.getElementById('balance').style.opacity = 1;
-                                        }
-                                    </script>
-                                    <!-- <div class="col text-end">
-                                        <p class="text-muted"><a href="addmoney.html" >+ Top up</a>
-                                        </p>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -252,7 +231,52 @@
                 </div>
             </div>
 
-            
+            <!-- balance-->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2 class="display-5 nbs" id="balance" style="transition: 1s;">Tzs. *** ***</h2>
+                                </div>
+                                <div class="col-auto btn btn-lg" id="show_balance">
+                                    <p class="text-muted">Show Balance</p>
+                                </div>
+                                <script>
+                                    document.getElementById("show_balance").onclick = show_balance;
+
+                                    // function to show balance
+                                    function show_balance(){
+                                        // generate a random balance
+                                        var balance = Math.floor(Math.random() * 1000000);
+                                        document.getElementById('balance').innerHTML = 'Tzs. ' + balance;
+
+                                        // currency format balance with comma
+                                        balance = balance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                        // check if there is class nbs then replace it with bs
+                                        if(document.getElementById('balance').classList.contains('bs')){
+                                            document.getElementById('balance').classList.remove('bs');
+                                            document.getElementById('balance').classList.add('nbs');
+                                            document.getElementById('balance').innerHTML = 'Tzs. ********';
+                                            document.getElementById('show_balance').innerHTML = 'Hide Balance';
+                                        }else{
+                                            document.getElementById('balance').classList.remove('nbs');
+                                            document.getElementById('balance').classList.add('bs');
+                                            document.getElementById('balance').innerHTML = 'Tzs. ' + balance;
+                                            document.getElementById('show_balance').innerHTML = 'Show Balance';
+                                        }
+                                    }
+                                </script>
+                                <!-- <div class="col text-end">
+                                    <p class="text-muted"><a href="addmoney.html" >+ Top up</a>
+                                    </p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- connection -->
             <div class="row mb-3">
