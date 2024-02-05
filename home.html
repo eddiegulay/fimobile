@@ -63,12 +63,12 @@
                             <div class="row">
                                 <div class="col-auto">
                                     <figure class="avatar avatar-44 rounded-15">
-                                        <img src="assets/img/user1.jpg" alt="">
+                                        <img src="assets/img/user2.jpg" alt="">
                                     </figure>
                                 </div>
                                 <div class="col px-0 align-self-center">
-                                    <p class="mb-1">Maxartkiller</p>
-                                    <p class="text-muted size-12">New York City, US</p>
+                                    <p class="mb-1">Nadine Habicht</p>
+                                    <p class="text-muted size-12">Dar Es Salaam</p>
                                 </div>
                                 <div class="col-auto">
                                     <button class="btn btn-44 btn-light">
@@ -81,15 +81,21 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <h1 class="display-4">100.00</h1>
+                                        <h1 class="display-4" id="balance" style="transition: 1s; opacity: 0;">100.00</h1>
                                     </div>
-                                    <div class="col-auto">
-                                        <p class="text-muted">Wallet Balance</p>
+                                    <div class="col-auto btn btn-lg" id="show_balance">
+                                        <p class="text-muted">Show Balance</p>
                                     </div>
-                                    <div class="col text-end">
+                                    <script>
+                                        // set opacity to 1 from 0
+                                        document.getElementById('show_balance').onclick = ()=>{
+                                            document.getElementById('balance').style.opacity = 1;
+                                        }
+                                    </script>
+                                    <!-- <div class="col text-end">
                                         <p class="text-muted"><a href="addmoney.html" >+ Top up</a>
                                         </p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
